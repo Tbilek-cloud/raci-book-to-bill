@@ -1,4 +1,4 @@
-[book_to_bill_raci (2).html](https://github.com/user-attachments/files/26090487/book_to_bill_raci.2.html)
+[book_to_bill_raci (3).html](https://github.com/user-attachments/files/26098580/book_to_bill_raci.3.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +8,6 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,sans-serif;font-size:13px;background:#f4f5f7;color:#172b4d;min-height:100vh;display:flex;flex-direction:column}
-
-/* TOPBAR */
 .topbar{background:#0052cc;color:#fff;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;flex-shrink:0}
 .brand{font-weight:700;font-size:15px;letter-spacing:.2px}
 .topbar-right{display:flex;align-items:center;gap:8px}
@@ -18,24 +16,16 @@ body{font-family:Arial,sans-serif;font-size:13px;background:#f4f5f7;color:#172b4
 .tbtn-save{background:#36b37e;color:#fff}.tbtn-save:hover{background:#2da06e}.tbtn-save:disabled{background:#6b778c;cursor:not-allowed}
 .tbtn-log{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)}.tbtn-log:hover{background:rgba(255,255,255,.28)}
 .tbtn-notes{background:#6554c0;color:#fff;border:none}.tbtn-notes:hover{background:#5243aa}
-
-/* TABS */
 .tabs{background:#fff;border-bottom:2px solid #dfe1e6;padding:0 20px;display:flex;flex-shrink:0}
 .tab{padding:10px 18px;font-size:12px;font-weight:600;color:#6b778c;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:color .12s,border-color .12s}
 .tab:hover{color:#0052cc}.tab.active{color:#0052cc;border-bottom-color:#0052cc}
 .tab.notes-tab.active{color:#6554c0;border-bottom-color:#6554c0}
-
-/* TOOLBAR */
 .toolbar{background:#fff;border-bottom:1px solid #dfe1e6;padding:9px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;flex-shrink:0}
 .toolbar label{font-size:11px;color:#6b778c;font-weight:600}
 .toolbar select{font-size:12px;padding:5px 8px;border:1.5px solid #dfe1e6;border-radius:4px;background:#fff;color:#172b4d;outline:none}
 .toolbar select:focus{border-color:#0052cc}
 .edit-hint{font-size:11px;color:#6b778c;font-style:italic}
-
-/* PANELS */
 .panel{display:none;flex:1;overflow-y:auto}.panel.active{display:block}
-
-/* RACI TABLE */
 .content{padding:16px 20px}
 .page-title{font-size:15px;font-weight:700;margin-bottom:2px}
 .page-sub{font-size:11px;color:#6b778c;margin-bottom:12px}
@@ -58,8 +48,7 @@ td.step{text-align:left;font-size:11px;color:#172b4d;padding-left:16px;line-heig
 .reg-header{font-size:9px;color:#0052cc !important;font-weight:400}
 tr:hover td:not(.section-row td){background:#f0f4ff}
 .section-row:hover td{background:#e4e6eb}
-
-/* BP NOTES PANEL */
+/* BP NOTES */
 .notes-panel{padding:20px;max-width:1100px}
 .notes-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:10px}
 .notes-title{font-size:15px;font-weight:700;color:#172b4d}
@@ -80,8 +69,6 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 .btn-save-note:hover{background:#5243aa}
 .btn-save-note:disabled{background:#b3aad8;cursor:not-allowed}
 .note-dot{width:7px;height:7px;border-radius:50%;background:#ffab00;display:none;margin-left:6px;flex-shrink:0}
-
-/* ALL NOTES VIEW */
 .all-notes-section{margin-top:24px}
 .all-notes-title{font-size:13px;font-weight:700;color:#172b4d;margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .all-notes-search{font-size:12px;padding:6px 10px;border:1.5px solid #dfe1e6;border-radius:4px;outline:none;width:220px;margin-left:auto}
@@ -92,8 +79,7 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 .note-entry-meta{font-size:10px;color:#6b778c}
 .note-entry-text{font-size:12px;color:#172b4d;line-height:1.6;white-space:pre-wrap}
 .no-notes{text-align:center;color:#6b778c;padding:30px 0;font-size:13px}
-
-/* AUDIT LOG PANEL */
+/* AUDIT LOG */
 .log-panel{padding:20px}
 .log-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px}
 .log-title{font-size:15px;font-weight:700}
@@ -115,8 +101,7 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 .stat-n{font-size:20px;font-weight:700;color:#0052cc}.stat-l{font-size:10px;color:#6b778c;text-transform:uppercase;letter-spacing:.4px}
 .log-type-note{background:#f0ebff;color:#5243aa;font-size:10px;padding:1px 7px;border-radius:8px;font-weight:700;margin-left:4px}
 .log-type-raci{background:#deebff;color:#0052cc;font-size:10px;padding:1px 7px;border-radius:8px;font-weight:700;margin-left:4px}
-
-/* CELL POPUP */
+/* POPUP */
 .popup{display:none;position:fixed;z-index:200;background:#fff;border-radius:8px;box-shadow:0 4px 24px rgba(0,0,0,.22);width:240px;overflow:hidden}
 .popup.open{display:block}
 .popup-head{background:#0052cc;color:#fff;padding:9px 12px;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center}
@@ -131,8 +116,7 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 .popup-footer{display:flex;gap:5px;padding:8px 12px;border-top:1px solid #f0f0f0;background:#f4f5f7}
 .btn-apply{background:#0052cc;color:#fff;border:none;border-radius:4px;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer;flex:1}.btn-apply:hover{background:#0065ff}
 .btn-cancel2{background:#fff;color:#172b4d;border:1px solid #dfe1e6;border-radius:4px;padding:5px 9px;font-size:11px;cursor:pointer}.btn-cancel2:hover{background:#ebecf0}
-
-/* SAVE MODAL */
+/* MODALS */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:300;align-items:center;justify-content:center}
 .modal-bg.open{display:flex}
 .modal{background:#fff;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,.2);width:380px;overflow:hidden}
@@ -161,7 +145,6 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 </head>
 <body>
 
-<!-- TOPBAR -->
 <div class="topbar">
   <div class="brand">Keyloop · Book to Bill RACI</div>
   <div class="topbar-right">
@@ -172,19 +155,12 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
   </div>
 </div>
 
-<!-- TABS -->
 <div class="tabs">
   <div class="tab active" id="tab-raci" onclick="switchTab('raci')">RACI Table</div>
-  <div class="tab notes-tab" id="tab-notes" onclick="switchTab('notes')">
-    &#128221; BP Notes
-    <span id="notesDot" class="note-dot"></span>
-  </div>
-  <div class="tab" id="tab-log" onclick="switchTab('log')">
-    Audit Log <span id="logCount" style="background:#0052cc;color:#fff;border-radius:8px;padding:1px 7px;font-size:10px;margin-left:4px;display:none">0</span>
-  </div>
+  <div class="tab notes-tab" id="tab-notes" onclick="switchTab('notes')">&#128221; BP Notes <span id="notesDot" class="note-dot"></span></div>
+  <div class="tab" id="tab-log" onclick="switchTab('log')">Audit Log <span id="logCount" style="background:#0052cc;color:#fff;border-radius:8px;padding:1px 7px;font-size:10px;margin-left:4px;display:none">0</span></div>
 </div>
 
-<!-- TOOLBAR -->
 <div class="toolbar" id="raciToolbar">
   <label>Region / System:</label>
   <select id="sysFilter" onchange="filterTable()">
@@ -202,13 +178,12 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
     <option value="2">PS – Professional Services</option>
     <option value="3">Collections</option>
     <option value="4">Cash &amp; Bank</option>
-    <option value="5">CE – Customer Enablement</option>
+    <option value="5">CE – Customer Enablement / Warehouse</option>
     <option value="6">FBP – Finance Business Partner</option>
   </select>
   <span class="edit-hint">Click any badge to edit · Save requires sign-in</span>
 </div>
 
-<!-- RACI PANEL -->
 <div class="panel active" id="panel-raci">
   <div class="content">
     <div class="page-title">Book to Bill — RACI by system &amp; region</div>
@@ -244,10 +219,10 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
       <th colspan="7" class="reg-header">Canada</th>
     </tr>
     <tr>
-      <th>Sales</th><th>Billing/CBM</th><th>PS</th><th>Collections</th><th>Cash&amp;Bank</th><th>CE</th><th>FBP</th>
-      <th>Sales</th><th>Billing/CBM</th><th>PS</th><th>Collections</th><th>Cash&amp;Bank</th><th>CE</th><th>FBP</th>
-      <th>Sales</th><th>Billing/CBM</th><th>PS</th><th>Collections</th><th>Cash&amp;Bank</th><th>CE</th><th>FBP</th>
-      <th>Sales</th><th>Billing/CBM</th><th>PS</th><th>Collections</th><th>Cash&amp;Bank</th><th>CE</th><th>FBP</th>
+      <th>Sales</th><th>Billing/CBM</th><th>PS</th><th>Collections</th><th>Cash&amp;Bank</th><th>CE/WH</th><th>FBP</th>
+      <th>Sales</th><th>Billing/CBM</th><th>PS</th><th>Collections</th><th>Cash&amp;Bank</th><th>CE/WH</th><th>FBP</th>
+      <th>Sales</th><th>Billing/CBM</th><th>PS</th><th>Collections</th><th>Cash&amp;Bank</th><th>CE/WH</th><th>FBP</th>
+      <th>Sales</th><th>Billing/CBM</th><th>PS</th><th>Collections</th><th>Cash&amp;Bank</th><th>CE/WH</th><th>FBP</th>
     </tr>
     </thead>
     <tbody id="tableBody"></tbody>
@@ -259,23 +234,11 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 <!-- BP NOTES PANEL -->
 <div class="panel" id="panel-notes">
   <div class="notes-panel">
-    <div class="notes-header">
-      <div class="notes-title">&#128221; Business Partner Notes</div>
-    </div>
-    <div class="notes-subtitle">
-      This space is for Finance Business Partners (FBPs) to record observations, decisions, open questions, or commentary on each process section.
-      Notes are saved with your sign-in and appear in the Audit Log. Use the search below to find notes across all sections.
-    </div>
-
-    <!-- Notes cards per section -->
+    <div class="notes-header"><div class="notes-title">&#128221; Business Partner Notes</div></div>
+    <div class="notes-subtitle">This space is for Finance Business Partners (FBPs) to record observations, decisions, open questions or commentary on each process section. Notes are saved with your sign-in and appear in the Audit Log.</div>
     <div class="notes-grid" id="notesGrid"></div>
-
-    <!-- All saved notes view -->
     <div class="all-notes-section">
-      <div class="all-notes-title">
-        All saved notes
-        <input class="all-notes-search" id="notesSearch" placeholder="Search notes..." oninput="renderAllNotes()">
-      </div>
+      <div class="all-notes-title">All saved notes <input class="all-notes-search" id="notesSearch" placeholder="Search notes..." oninput="renderAllNotes()"></div>
       <div id="allNotesContent"></div>
     </div>
   </div>
@@ -317,18 +280,11 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
     <div class="modal-body">
       <div class="success-banner green" id="successBanner">✓ RACI changes saved &amp; logged!</div>
       <div id="loginSection">
-        <div class="info-box">Sign in to confirm your RACI edits. Your username will be recorded in the audit log for every change.</div>
+        <div class="info-box">Sign in to confirm your RACI edits. Your username will be recorded in the audit log.</div>
         <div class="login-err" id="loginErr">Invalid username or password.</div>
-        <label>Username</label>
-        <input type="text" id="uname" placeholder="e.g. cbm.uki" autocomplete="off">
-        <label>Password</label>
-        <input type="password" id="pwd" placeholder="••••••••">
-        <div class="users-hint">
-          <b>Demo accounts</b><br>
-          cbm.uki / cbm.canada / cbm.row &nbsp;<span class="rpill p-cbm">CBM</span> — pass123<br>
-          fbp.uki / fbp.canada / fbp.row &nbsp;<span class="rpill p-fbp">FBP</span> — pass123<br>
-          admin &nbsp;<span class="rpill p-adm">Admin</span> — admin123
-        </div>
+        <label>Username</label><input type="text" id="uname" placeholder="e.g. cbm.uki" autocomplete="off">
+        <label>Password</label><input type="password" id="pwd" placeholder="••••••••">
+        <div class="users-hint"><b>Demo accounts</b><br>cbm.uki / cbm.canada / cbm.row <span class="rpill p-cbm">CBM</span> — pass123<br>fbp.uki / fbp.canada / fbp.row <span class="rpill p-fbp">FBP</span> — pass123<br>admin <span class="rpill p-adm">Admin</span> — admin123</div>
       </div>
     </div>
     <div class="modal-footer" id="modalFooter">
@@ -347,10 +303,8 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
       <div id="noteLoginSection">
         <div class="info-box purple">Sign in as a Finance Business Partner to save this note. Your name and timestamp will be recorded.</div>
         <div class="login-err" id="noteLoginErr">Invalid username or password.</div>
-        <label>Username</label>
-        <input type="text" id="noteUname" placeholder="e.g. fbp.uki" autocomplete="off">
-        <label>Password</label>
-        <input type="password" id="notePwd" placeholder="••••••••">
+        <label>Username</label><input type="text" id="noteUname" placeholder="e.g. fbp.uki" autocomplete="off">
+        <label>Password</label><input type="password" id="notePwd" placeholder="••••••••">
       </div>
     </div>
     <div class="modal-footer" id="noteModalFooter">
@@ -362,7 +316,7 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 
 <script>
 // ── CONFIG ────────────────────────────────────────────────────────────────────
-var APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbzrIEohEjMFiKL0LzKn9hLNnFVSlD5QXWAB9i4UiLn4XscIhZJd_jBxhWGnIA4EocHr/exec';
+var APPS_SCRIPT_URL='YOUR_APPS_SCRIPT_URL_HERE';
 
 // ── USERS ─────────────────────────────────────────────────────────────────────
 var USERS={
@@ -375,7 +329,6 @@ var USERS={
   'admin':     {pass:'admin123',label:'Admin',       role:'admin'}
 };
 
-// ── ICONS ─────────────────────────────────────────────────────────────────────
 var ICONS=[
   {val:'R',  cls:'r',  label:'Responsible'},
   {val:'A',  cls:'a',  label:'Accountable'},
@@ -385,109 +338,264 @@ var ICONS=[
   {val:'—',  cls:'',   label:'None'},
 ];
 
-// ── SYS / STAKE MAPS ──────────────────────────────────────────────────────────
 var SYS_KEYS=['kf','rq','css','se'];
 var SYS_LABELS={kf:'Keyforce–NetSuite (UKI)',rq:'Rapid–QuickBooks (Canada)',css:'CSS–Navision (RoW)',se:'Serti–Billing (Canada)'};
-var STAKE_LABELS=['Sales','Billing/CBM','PS','Collections','Cash & Bank','CE','FBP'];
+var STAKE_LABELS=['Sales','Billing/CBM','PS','Collections','Cash & Bank','CE/Warehouse','FBP'];
 function colLabel(ci){return SYS_LABELS[SYS_KEYS[Math.floor(ci/7)]]+' / '+STAKE_LABELS[ci%7];}
 
-// ── DATA ──────────────────────────────────────────────────────────────────────
+// ── DATA (Anna's corrections applied) ─────────────────────────────────────────
+// Cols per system: [Sales, Billing/CBM, PS, Collections, Cash&Bank, CE/WH, FBP]
 var D='—';
 var SECTIONS=[
+
+  // ── 1. CATALOGUE & PRODUCT MANAGEMENT ────────────────────────────────────
+  // Anna: Catalogue team (not billing) maintains catalogue in NS & NAV.
+  // Billing only does Annual Price Increase (moved to section 10).
   {title:'1. Catalogue & Product Management',rows:[
-    ['New product / SKU setup & activation','all','C','R','—','—','—','—','A','C','R','—','—','—','—','A','C','R','—','—','—','—','A','C','R','—','—','—','—','A'],
-    ['Pricing maintenance & rate card update','all','C','C','—','—','—','—','R/A','C','R','—','—','—','—','A','C','C','—','—','—','—','R/A','C','C','—','—','—','—','R/A'],
-    ['Item sync: Salesforce → Boomi → NetSuite','kf','—','R','—','—','—','—','I',D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D],
+    ['New product / SKU setup & activation in source system','all',
+      'C','—','—','—','—','—','A',  'C','—','—','—','—','—','A',  'C','—','—','—','—','—','A',  'C','—','—','—','—','—','A'],
+    // ^ Catalogue team (CE/WH col used as proxy) owns this, not Billing
+    ['Catalogue maintenance: item attributes, rev rec & billing fields','all',
+      '—','I','—','—','—','R/A','A',  '—','I','—','—','—','R/A','A',  '—','I','—','—','—','R/A','A',  '—','I','—','—','—','R/A','A'],
+    ['Pricing maintenance & rate card update','all',
+      'C','—','—','—','—','—','R/A',  'C','R','—','—','—','—','A',  'C','—','—','—','—','—','R/A',  'C','—','—','—','—','—','R/A'],
+    ['Item sync: Salesforce → Boomi → NetSuite','kf',
+      '—','I','—','—','—','R','—',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
   ]},
+
+  // ── 2. CUSTOMER MASTER DATA MANAGEMENT ───────────────────────────────────
   {title:'2. Customer Master Data Management',rows:[
-    ['New customer creation (credit check, VAT, mandatory fields)','all','C','R','—','—','—','C','A','C','R','—','—','—','C','A','C','R','—','—','—','C','A','C','R','—','—','—','C','A'],
-    ['Customer master data amendments','all','—','R/A','—','—','—','C','I','—','R/A','—','—','—','C','I','—','R/A','—','—','—','C','I','—','R/A','—','—','—','C','I'],
-    ['Customer sync: Salesforce → Boomi → NetSuite','kf','—','R','—','—','—','—','I',D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D],
-    ['Credit check & sanctions review','all','C','R','—','—','—','—','A','C','R','—','—','—','—','A','C','R','—','—','—','—','A','C','R','—','—','—','—','A'],
+    ['New customer creation (credit check, VAT, mandatory fields)','all',
+      'C','R','—','—','—','C','A',  'C','R','—','—','—','C','A',  'C','R','—','—','—','C','A',  'C','R','—','—','—','C','A'],
+    ['Customer master data amendments (address, billing entity)','all',
+      '—','R/A','—','—','—','C','I',  '—','R/A','—','—','—','C','I',  '—','R/A','—','—','—','C','I',  '—','R/A','—','—','—','C','I'],
+    ['Customer sync: Salesforce → Boomi → NetSuite','kf',
+      '—','I','—','—','—','R','—',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
+    ['Credit check & sanctions review','all',
+      'C','R','—','—','—','—','A',  'C','R','—','—','—','—','A',  'C','R','—','—','—','—','A',  'C','R','—','—','—','—','A'],
   ]},
+
+  // ── 3. QUOTE TO ORDER ─────────────────────────────────────────────────────
+  // Anna: Billing team does NOT approve discounts. Only validates quote/order (system vs signed PDF).
+  // In CSS/NAV: Oracle CPQ quote "Accepted by customer" → Billing validates values vs PDF, can only update PO number.
+  // In KF/NS: Billing validates sales orders only, does NOT approve quotes or discounts.
+  // PS project container: created automatically in NS by order activation; in NAV by "Accepted by CDK" status.
   {title:'3. Quote to Order',rows:[
-    ['Quote validation & discount approval','all','R','C','C','—','—','—','A','R','C','C','—','—','—','A','R','C','C','—','—','—','A','R','C','C','—','—','—','A'],
-    ['Quote conversion to order in CRM','all','R/A','C','C','—','—','—','C','R/A','C','C','—','—','—','C','R/A','C','C','—','—','—','C','R/A','C','C','—','—','—','C'],
-    ['PS involvement matrix check at quoting stage','all','C','—','R/A','—','—','—','C','C','—','R/A','—','—','—','C','C','—','R/A','—','—','—','C','C','—','R/A','—','—','—','C'],
-    ['Order activation & subscription creation (NetSuite ZAB)','kf','—','R','—','—','—','—','I',D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D],
-    ['Billing case creation & pick-up in Salesforce','rq',D,D,D,D,D,D,D,'—','R/A','—','—','—','—','I',D,D,D,D,D,D,D,D,D,D,D,D,D,D],
+    ['Quote validation: discount & commercial approval','all',
+      'R','—','—','—','—','—','A',  'R','—','—','—','—','—','A',  'R','—','—','—','—','—','A',  'R','—','—','—','—','—','A'],
+    // ^ Billing removed from discount approval per Anna
+    ['Quote/order validation: system values vs signed PDF (Billing team)','all',
+      '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I'],
+    // ^ Billing validates system vs PDF only; PO number update only in CSS/NAV
+    ['Purchase Order number update on order (CSS/NAV)','css',
+      D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R','—','—','—','—','I',  D,D,D,D,D,D,D],
+    ['PS involvement matrix check at quoting stage','all',
+      'C','—','R/A','—','—','—','C',  'C','—','R/A','—','—','—','C',  'C','—','R/A','—','—','—','C',  'C','—','R/A','—','—','—','C'],
+    // PS project container auto-created on order activation (NS) / "Accepted by CDK" status (NAV)
+    ['Order activation → auto PS project & subscription creation (NS)','kf',
+      '—','—','—','—','—','—','I',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
+    ['"Accepted by CDK" status → auto Sales Contract (Project) creation (NAV)','css',
+      D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','—','—','—','—','—','I',  D,D,D,D,D,D,D],
+    ['Billing case creation & pick-up in Salesforce (Rapid/Canada)','rq',
+      D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','I',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
   ]},
+
+  // ── 4. PS – PROJECT & MILESTONE MANAGEMENT ────────────────────────────────
+  // Anna: PS project container auto-created (see section 3).
+  // T&M rating done by Warehouse/CE team, not CBM. CBM only does corrections.
+  // Billing milestone: PS triggers OT (automatic); CBM runs recurring billing runs.
   {title:'4. PS – Project & Milestone Management',rows:[
-    ['PS project container creation (1 quote → 1 project)','all','C','C','R/A','—','—','—','I','C','C','R/A','—','—','—','I','C','C','R/A','—','—','—','I','C','C','R/A','—','—','—','I'],
-    ['Fixed-fee vs T&M contract type identification','all','C','C','R','—','—','—','A','C','C','R','—','—','—','A','C','C','R','—','—','—','A','C','C','R','—','—','—','A'],
-    ['Sub-milestone creation & hour tracking','all','—','C','R/A','—','—','—','I','—','C','R/A','—','—','—','I','—','C','R/A','—','—','—','I','—','C','R/A','—','—','—','I'],
-    ['Billing milestone completion trigger → invoice','all','—','R','A','—','—','—','I','—','R','A','—','—','—','I','—','R','A','—','—','—','I','—','R','A','—','—','—','I'],
-    ['T&M rating: usage data → charge records','all','—','R','C','—','—','—','A','—','R','C','—','—','—','A','—','R','C','—','—','—','A','—','R','C','—','—','—','A'],
-    ['KeyedIn ↔ NetSuite milestone data sync','kf','—','C','R','—','—','—','I',D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D],
-    ['PS fixed-fee: control total hours ≤ contracted max','all','—','R','C','—','—','—','A','—','R','C','—','—','—','A','—','R','C','—','—','—','A','—','R','C','—','—','—','A'],
+    ['Fixed-fee vs T&M contract type identification at quote','all',
+      'C','C','R','—','—','—','A',  'C','C','R','—','—','—','A',  'C','C','R','—','—','—','A',  'C','C','R','—','—','—','A'],
+    ['Sub-milestone creation & hour tracking','all',
+      '—','—','R/A','—','—','—','I',  '—','—','R/A','—','—','—','I',  '—','—','R/A','—','—','—','I',  '—','—','R/A','—','—','—','I'],
+    // T&M rating: CE/Warehouse team finalises; CBM only corrects if needed
+    ['T&M billing finalisation (CE/Warehouse team)','all',
+      '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I'],
+    ['T&M billing corrections (CBM, if required)','all',
+      '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I'],
+    // OT milestone invoice: triggered automatically by PS milestone completion
+    ['OT/Consultancy invoice: auto-triggered on milestone completion (PS)','all',
+      '—','—','R','—','—','—','I',  '—','—','R','—','—','—','I',  '—','—','R','—','—','—','I',  '—','—','R','—','—','—','I'],
+    // Recurring element billed by CBM in billing runs
+    ['Recurring element billing runs (CBM)','all',
+      '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I'],
+    ['PS fixed-fee: control total hours ≤ contracted maximum','all',
+      '—','C','R','—','—','—','A',  '—','C','R','—','—','—','A',  '—','C','R','—','—','—','A',  '—','C','R','—','—','—','A'],
+    ['KeyedIn ↔ NetSuite milestone data sync','kf',
+      '—','—','R','—','—','—','I',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
   ]},
+
+  // ── 5. ORDER TO FULFILMENT & BACKLOG ─────────────────────────────────────
+  // Anna: No Backlog Recurring Review in NS; exists only in NAV; FBPs not involved.
+  // "Deletion" not available in NS/NAV for billing. Backlog management is done by PS.
   {title:'5. Order to Fulfilment & Backlog',rows:[
-    ['Backlog recurring review & challenge','all','C','R','C','—','—','—','A','C','R','C','—','—','—','A','C','R','C','—','—','—','A','C','R','C','—','—','—','A'],
-    ['Order amendments (quantity, site change, deletion)','all','R','R','C','—','—','—','A','R','R','C','—','—','—','A','R','R','C','—','—','—','A','R','R','C','—','—','—','A'],
-    ['Hardware fulfilment (serialised & non-serialised)','all','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A'],
-    ['HaaS installation milestone → billing start','all','—','R','C','—','—','—','I','—','R','C','—','—','—','I','—','R','C','—','—','—','I','—','R','C','—','—','—','I'],
-    ['Volume report extraction & billing spreadsheet','rq',D,D,D,D,D,D,D,'—','R/A','—','—','—','—','I',D,D,D,D,D,D,D,D,D,D,D,D,D,D],
+    // Backlog recurring review: NAV only, PS/CBM, FBP not involved
+    ['Backlog recurring review (NAV only — not applicable in NS)','css',
+      D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R','C','—','—','—','—',  D,D,D,D,D,D,D],
+    // Backlog management (amendments/admin deletions by PS)
+    ['Backlog order amendments & admin deletions (managed by PS)','all',
+      'C','—','R/A','—','—','—','I',  'C','—','R/A','—','—','—','I',  'C','—','R/A','—','—','—','I',  'C','—','R/A','—','—','—','I'],
+    ['Hardware fulfilment (serialised & non-serialised) — Warehouse','all',
+      '—','—','—','—','—','R','A',  '—','—','—','—','—','R','A',  '—','—','—','—','—','R','A',  '—','—','—','—','—','R','A'],
+    ['HaaS installation milestone → billing start trigger','all',
+      '—','R','C','—','—','—','I',  '—','R','C','—','—','—','I',  '—','R','C','—','—','—','I',  '—','R','C','—','—','—','I'],
+    ['Volume report extraction & billing spreadsheet (Rapid only)','rq',
+      D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','I',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
   ]},
+
+  // ── 6. INVOICE & BILLING GENERATION ──────────────────────────────────────
+  // Anna: No SaaS/HaaS split in NS — Recurring and Transactional (Usage) billing by CBM.
+  // Sales Order (HW) billing by Warehouse. OT/Consultancy auto on milestone.
+  // PS items invoiced automatically in both NS & NAV on milestone completion.
+  // FBPs NOT informed every time invoice dispatched.
+  // Pro forma: does NOT exist in NS; manual actual Proforma done for PO request purposes only.
+  // OT & Hardware by Warehouse or auto on milestone.
   {title:'6. Invoice & Billing Generation',rows:[
-    ['SaaS/HaaS recurring invoice run (NetSuite ZAB)','kf','—','R/A','—','—','—','—','I',D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D],
-    ['Recurring invoice generation in QuickBooks','rq',D,D,D,D,D,D,D,'—','R/A','—','—','—','—','I',D,D,D,D,D,D,D,D,D,D,D,D,D,D],
-    ['Recurring invoice generation in Navision','css',D,D,D,D,D,D,D,D,D,D,D,D,D,D,'—','R/A','—','—','—','—','I',D,D,D,D,D,D,D],
-    ['Recurring invoice generation in Serti','se',D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,'—','R/A','—','—','—','—','I'],
-    ['PS one-time invoice (milestone complete)','all','—','R','A','—','—','—','I','—','R','A','—','—','—','I','—','R','A','—','—','—','I','—','R','A','—','—','—','I'],
-    ['One-time & hardware invoice generation','all','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A'],
-    ['Invoice consolidation (multi-subscription)','all','—','R/A','—','—','—','—','I','—','R/A','—','—','—','—','I','—','R/A','—','—','—','—','I','—','R/A','—','—','—','—','I'],
-    ['Pro forma invoice generation & distribution','all','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A'],
-    ['Invoice delivery (email / portal / paper)','all','—','R/A','—','—','—','C','I','—','R/A','—','—','—','C','I','—','R/A','—','—','—','C','I','—','R/A','—','—','—','C','I'],
-    ['E-invoicing & tax compliance (VAT)','all','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A'],
-    ['Usage/consumption billing (SMS, print, T&M)','all','—','R','C','—','—','—','A','—','R','C','—','—','—','A','—','R','C','—','—','—','A','—','R','C','—','—','—','A'],
+    // Recurring billing: CBM triggers billing runs in NS & NAV
+    ['Recurring billing runs — CBM triggers (NS & NAV)','kf',
+      '—','R/A','—','—','—','—','—',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
+    ['Recurring billing runs — CBM triggers (NAV)','css',
+      D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','—',  D,D,D,D,D,D,D],
+    ['Recurring invoices in QuickBooks (Rapid)','rq',
+      D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','—',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
+    ['Recurring invoices in Serti (Canada)','se',
+      D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','—'],
+    // Transactional/Usage billing: CBM triggers in NS
+    ['Transactional / usage billing (CBM triggers in NS)','kf',
+      '—','R/A','—','—','—','—','—',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
+    // Sales Order / Hardware billing: Warehouse team
+    ['Sales order / hardware invoice (Warehouse team)','all',
+      '—','—','—','—','—','R','I',  '—','—','—','—','—','R','I',  '—','—','—','—','—','R','I',  '—','—','—','—','—','R','I'],
+    // OT/Consultancy/PS: auto on milestone completion in both NS & NAV
+    ['OT / PS invoice: auto-generated on milestone completion','all',
+      '—','—','R','—','—','—','—',  '—','—','R','—','—','—','—',  '—','—','R','—','—','—','—',  '—','—','R','—','—','—','—'],
+    ['Invoice consolidation (multi-subscription, bill-to grouping)','all',
+      '—','R/A','—','—','—','—','—',  '—','R/A','—','—','—','—','—',  '—','R/A','—','—','—','—','—',  '—','R/A','—','—','—','—','—'],
+    // Pro forma: does NOT exist in NS; manual only for PO request
+    ['Pro forma invoice (manual, PO request only — NOT in NS)','css',
+      D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','—',  D,D,D,D,D,D,D],
+    // Invoice delivery: FBP not informed routinely
+    ['Invoice delivery (email / portal / paper)','all',
+      '—','R/A','—','—','—','C','—',  '—','R/A','—','—','—','C','—',  '—','R/A','—','—','—','C','—',  '—','R/A','—','—','—','C','—'],
+    ['E-invoicing & tax compliance (VAT, e-reporting)','all',
+      '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A'],
+    ['Usage/consumption billing (SMS, print)','all',
+      '—','R','C','—','—','—','A',  '—','R','C','—','—','—','A',  '—','R','C','—','—','—','A',  '—','R','C','—','—','—','A'],
   ]},
+
+  // ── 7. CREDIT MEMOS & BILLING CORRECTIONS ────────────────────────────────
   {title:'7. Credit Memos & Billing Corrections',rows:[
-    ['Credit memo request & initiation','all','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A'],
-    ['Credit memo approval (tiered by value)','all','—','C','—','—','—','—','A','—','C','—','—','—','—','A','—','C','—','—','—','—','A','—','C','—','—','—','—','A'],
-    ['Invoice correction & rebilling','all','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A'],
-    ['Duplicate invoice prevention & detection','all','—','R/A','—','—','—','—','I','—','R/A','—','—','—','—','I','—','R/A','—','—','—','—','I','—','R/A','—','—','—','—','I'],
+    ['Credit memo request & initiation (reason code, supporting doc)','all',
+      '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A'],
+    ['Credit memo approval (tiered by value & reason)','all',
+      '—','—','—','—','—','—','A',  '—','—','—','—','—','—','A',  '—','—','—','—','—','—','A',  '—','—','—','—','—','—','A'],
+    ['Invoice correction & rebilling (credit rebuild → recharge)','all',
+      '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A'],
+    ['Duplicate invoice prevention & detection','all',
+      '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I'],
   ]},
+
+  // ── 8. REVENUE RECOGNITION ────────────────────────────────────────────────
+  // Anna: Revenue release & reconciliation in NAV done by Billing (CBM).
+  // Reconciliation is a separate report reconciling NAV, HYP & DWH.
+  // Contract cost capitalisation & amortisation: not really applicable.
   {title:'8. Revenue Recognition',rows:[
-    ['Revenue plan creation & release – IFRS + local GAAP','kf','—','I','—','—','—','—','R/A',D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D,D],
-    ['Revenue release & reconciliation in Navision','css',D,D,D,D,D,D,D,D,D,D,D,D,D,D,'—','I','—','—','—','—','R/A',D,D,D,D,D,D,D],
-    ['PS rev rec: ratable vs point-in-time','all','—','C','C','—','—','—','R/A','—','C','C','—','—','—','R/A','—','C','C','—','—','—','R/A','—','C','C','—','—','—','R/A'],
-    ['Revenue reconciliation & period-end close','all','—','C','—','—','—','—','R/A','—','C','—','—','—','—','R/A','—','C','—','—','—','—','R/A','—','C','—','—','—','—','R/A'],
-    ['Contract cost capitalisation & amortisation','all','—','I','—','—','—','—','R/A','—','I','—','—','—','—','R/A','—','I','—','—','—','—','R/A','—','I','—','—','—','—','R/A'],
-    ['Dual-book rev rec: IFRS vs management book','all','—','I','—','—','—','—','R/A','—','I','—','—','—','—','R/A','—','I','—','—','—','—','R/A','—','I','—','—','—','—','R/A'],
+    ['Revenue plan creation & release – IFRS + local GAAP (NS ZAB)','kf',
+      '—','I','—','—','—','—','R/A',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
+    // NAV: Billing (CBM) does revenue release; reconciliation vs HYP & DWH is separate
+    ['Revenue release in NAV (CBM) + reconciliation vs HYP & DWH','css',
+      D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R','—','—','—','—','A',  D,D,D,D,D,D,D],
+    ['PS rev rec: ratable (linked to SaaS) vs point-in-time','all',
+      '—','C','C','—','—','—','R/A',  '—','C','C','—','—','—','R/A',  '—','C','C','—','—','—','R/A',  '—','C','C','—','—','—','R/A'],
+    ['Revenue reconciliation & period-end close','all',
+      '—','C','—','—','—','—','R/A',  '—','C','—','—','—','—','R/A',  '—','C','—','—','—','—','R/A',  '—','C','—','—','—','—','R/A'],
+    ['Dual-book rev rec: IFRS vs management book','all',
+      '—','I','—','—','—','—','R/A',  '—','I','—','—','—','—','R/A',  '—','I','—','—','—','—','R/A',  '—','I','—','—','—','—','R/A'],
   ]},
+
+  // ── 9. ACCOUNTS RECEIVABLE & CASH APPLICATION ─────────────────────────────
   {title:'9. Accounts Receivable & Cash Application',rows:[
-    ['Payment receipt & application (DD / bank transfer)','all','—','C','—','C','R','—','A','—','C','—','C','R','—','A','—','C','—','C','R','—','A','—','C','—','C','R','—','A'],
-    ['Automated payment matching','all','—','—','—','C','R/A','—','I','—','—','—','C','R/A','—','I','—','—','—','C','R/A','—','I','—','—','—','C','R/A','—','I'],
-    ['Unapplied cash management & month-end','all','—','—','—','C','R/A','—','I','—','—','—','C','R/A','—','I','—','—','—','C','R/A','—','I','—','—','—','C','R/A','—','I'],
-    ['Dunning letter workflow (tiered reminders)','all','—','—','—','R/A','—','—','A','—','—','—','R/A','—','—','A','—','—','—','R/A','—','—','A','—','—','—','R/A','—','—','A'],
-    ['Collections escalation (sales, CE, finance)','all','C','—','—','R','—','C','A','C','—','—','R','—','C','A','C','—','—','R','—','C','A','C','—','—','R','—','C','A'],
-    ['Dispute management (contract-related)','all','C','R','—','C','—','C','C','C','R','—','C','—','C','C','C','R','—','C','—','C','C','C','R','—','C','—','C','C'],
-    ['Bad debt provision & write-off approval','all','—','—','—','C','—','—','R/A','—','—','—','C','—','—','R/A','—','—','—','C','—','—','R/A','—','—','—','C','—','—','R/A'],
-    ['Customer refund / reimbursement approval','all','—','C','—','—','C','—','A','—','C','—','—','C','—','A','—','C','—','—','C','—','A','—','C','—','—','C','—','A'],
-    ['Intercompany billing & netting','all','—','C','—','—','C','—','R/A','—','C','—','—','C','—','R/A','—','C','—','—','C','—','R/A','—','C','—','—','C','—','R/A'],
+    ['Payment receipt & application (direct debit / bank transfer)','all',
+      '—','C','—','C','R','—','A',  '—','C','—','C','R','—','A',  '—','C','—','C','R','—','A',  '—','C','—','C','R','—','A'],
+    ['Automated payment matching (exact → auto-apply)','all',
+      '—','—','—','C','R/A','—','I',  '—','—','—','C','R/A','—','I',  '—','—','—','C','R/A','—','I',  '—','—','—','C','R/A','—','I'],
+    ['Unapplied / unallocated cash management & month-end','all',
+      '—','—','—','C','R/A','—','I',  '—','—','—','C','R/A','—','I',  '—','—','—','C','R/A','—','I',  '—','—','—','C','R/A','—','I'],
+    ['Dunning letter workflow (tiered reminders)','all',
+      '—','—','—','R/A','—','—','A',  '—','—','—','R/A','—','—','A',  '—','—','—','R/A','—','—','A',  '—','—','—','R/A','—','—','A'],
+    ['Collections escalation (sales, CE, finance alignment)','all',
+      'C','—','—','R','—','C','A',  'C','—','—','R','—','C','A',  'C','—','—','R','—','C','A',  'C','—','—','R','—','C','A'],
+    ['Dispute management (contract-related)','all',
+      'C','R','—','C','—','C','C',  'C','R','—','C','—','C','C',  'C','R','—','C','—','C','C',  'C','R','—','C','—','C','C'],
+    ['Bad debt provision review & write-off approval','all',
+      '—','—','—','C','—','—','R/A',  '—','—','—','C','—','—','R/A',  '—','—','—','C','—','—','R/A',  '—','—','—','C','—','—','R/A'],
+    ['Customer refund / reimbursement approval','all',
+      '—','C','—','—','C','—','A',  '—','C','—','—','C','—','A',  '—','C','—','—','C','—','A',  '—','C','—','—','C','—','A'],
+    ['Intercompany billing & netting','all',
+      '—','C','—','—','C','—','R/A',  '—','C','—','—','C','—','R/A',  '—','C','—','—','C','—','R/A',  '—','C','—','—','C','—','R/A'],
   ]},
-  {title:'10. Service Contract & Subscription Management',rows:[
-    ['Service contract creation, amendment & maintenance','all','C','R/A','—','—','—','C','I','C','R/A','—','—','—','C','I','C','R/A','—','—','—','C','I','C','R/A','—','—','—','C','I'],
-    ['Contract termination / early cancellation approval','all','R','R','—','—','—','—','A','R','R','—','—','—','—','A','R','R','—','—','—','—','A','R','R','—','—','—','—','A'],
-    ['Subscription amendments (upsell, downsell, co-term)','all','R','C','—','—','—','—','A','R','C','—','—','—','—','A','R','C','—','—','—','—','A','R','C','—','—','—','—','A'],
-    ['Retail price increase (RPI) – calc, comms & ERP','all','I','R','—','—','—','—','A','I','R','—','—','—','—','A','I','R','—','—','—','—','A','I','R','—','—','—','—','A'],
-    ['Evergreen & term-based renewal processing','all','R','C','—','—','—','—','A','R','C','—','—','—','—','A','R','C','—','—','—','—','A','R','C','—','—','—','—','A'],
+
+  // ── 10. SERVICE CONTRACT / SUBSCRIPTION / ASSET MANAGEMENT ───────────────
+  // Anna: All points adjusted to Service Contract / Subscription / Asset.
+  // Cancellations in NS: approved by FBP, processed (R) by CBM.
+  // Subscription amendments: CBM performs cancellations, qty reductions, site changes.
+  // Co-term: not amendable.
+  // Annual Price Increase: CBM performs adjustment in NAV & SF/NS + provides contact details.
+  // Comms: Marketing. Calculations/% uplift agreed by Finance/Sales/Legal — CBM not involved.
+  {title:'10. Service Contract / Subscription / Asset Management',rows:[
+    ['Service contract / subscription creation & maintenance','all',
+      'C','R/A','—','—','—','C','I',  'C','R/A','—','—','—','C','I',  'C','R/A','—','—','—','C','I',  'C','R/A','—','—','—','C','I'],
+    // Cancellations: FBP approves (NS), CBM processes (R in both)
+    ['Subscription / asset cancellation — FBP approves, CBM processes','all',
+      '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A'],
+    // Qty reductions & site changes: CBM performs
+    ['Quantity reductions (downsell) & site changes — CBM','all',
+      'I','R','—','—','—','—','I',  'I','R','—','—','—','—','I',  'I','R','—','—','—','—','I',  'I','R','—','—','—','—','I'],
+    // Evergreen & term renewals
+    ['Evergreen & term-based renewal processing','all',
+      'R','C','—','—','—','—','I',  'R','C','—','—','—','—','I',  'R','C','—','—','—','—','I',  'R','C','—','—','—','—','I'],
+    // Annual Price Increase: CBM adjusts ERP & provides contacts; Marketing comms; Finance/Sales/Legal agree %
+    ['Annual Price Increase: uplift % agreed by Finance / Sales / Legal','all',
+      'C','—','—','—','—','—','R/A',  'C','—','—','—','—','—','R/A',  'C','—','—','—','—','—','R/A',  'C','—','—','—','—','—','R/A'],
+    ['Annual Price Increase: ERP price adjustment (CBM) & contact data','all',
+      '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I'],
+    ['Annual Price Increase: customer communications (Marketing)','all',
+      '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I'],
   ]},
+
+  // ── 11. CUSTOMER ENABLEMENT (CE) ─────────────────────────────────────────
   {title:'11. Customer Enablement (CE)',rows:[
-    ['Case creation & routing (billing/contract disputes)','all','C','C','—','C','—','R/A','I','C','C','—','C','—','R/A','I','C','C','—','C','—','R/A','I','C','C','—','C','—','R/A','I'],
-    ['Case management, escalation & SLA tracking','all','C','C','—','C','—','R/A','I','C','C','—','C','—','R/A','I','C','C','—','C','—','R/A','I','C','C','—','C','—','R/A','I'],
-    ['Customer portal: invoice & statement self-service','all','—','I','—','—','—','R/A','I','—','I','—','—','—','R/A','I','—','I','—','—','—','R/A','I','—','I','—','—','—','R/A','I'],
-    ['Entitlements, SLAs & incident management','all','—','—','—','—','—','R/A','I','—','—','—','—','—','R/A','I','—','—','—','—','—','R/A','I','—','—','—','—','—','R/A','I'],
-    ['Customer onboarding post go-live','all','C','C','R','—','—','R','A','C','C','R','—','—','R','A','C','C','R','—','—','R','A','C','C','R','—','—','R','A'],
+    ['Case creation & routing (billing/contract disputes)','all',
+      'C','C','—','C','—','R/A','I',  'C','C','—','C','—','R/A','I',  'C','C','—','C','—','R/A','I',  'C','C','—','C','—','R/A','I'],
+    ['Case management, escalation & SLA tracking','all',
+      'C','C','—','C','—','R/A','I',  'C','C','—','C','—','R/A','I',  'C','C','—','C','—','R/A','I',  'C','C','—','C','—','R/A','I'],
+    ['Customer portal: invoice & statement self-service','all',
+      '—','I','—','—','—','R/A','I',  '—','I','—','—','—','R/A','I',  '—','I','—','—','—','R/A','I',  '—','I','—','—','—','R/A','I'],
+    ['Entitlements, SLAs & incident management','all',
+      '—','—','—','—','—','R/A','I',  '—','—','—','—','—','R/A','I',  '—','—','—','—','—','R/A','I',  '—','—','—','—','—','R/A','I'],
+    ['Customer onboarding post go-live','all',
+      'C','C','R','—','—','R','A',  'C','C','R','—','—','R','A',  'C','C','R','—','—','R','A',  'C','C','R','—','—','R','A'],
   ]},
+
+  // ── 12. REPORTING & GOVERNANCE ────────────────────────────────────────────
   {title:'12. Reporting & Governance',rows:[
-    ['AR ageing, DSO & collections reporting','all','—','R','—','C','C','—','A','—','R','—','C','C','—','A','—','R','—','C','C','—','A','—','R','—','C','C','—','A'],
-    ['ARR / ACV / TCV bookings & revenue reporting','all','C','C','—','—','—','—','R/A','C','C','—','—','—','—','R/A','C','C','—','—','—','—','R/A','C','C','—','—','—','—','R/A'],
-    ['Win/loss & conversion loss reporting','all','C','R','—','—','—','—','A','C','R','—','—','—','—','A','C','R','—','—','—','—','A','C','R','—','—','—','—','A'],
-    ['PS backlog & milestone completion reporting','all','—','C','R','—','—','—','A','—','C','R','—','—','—','A','—','C','R','—','—','—','A','—','C','R','—','—','—','A'],
-    ['Usage cap / commitment tracking','all','—','R','C','—','—','—','A','—','R','C','—','—','—','A','—','R','C','—','—','—','A','—','R','C','—','—','—','A'],
-    ['SOX compliance & audit support','all','—','C','—','—','—','—','R/A','—','C','—','—','—','—','R/A','—','C','—','—','—','—','R/A','—','C','—','—','—','—','R/A'],
-    ['Data quality monitoring & audit trail','all','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A','—','R','—','—','—','—','A'],
+    ['AR ageing, DSO & collections reporting','all',
+      '—','R','—','C','C','—','A',  '—','R','—','C','C','—','A',  '—','R','—','C','C','—','A',  '—','R','—','C','C','—','A'],
+    ['ARR / ACV / TCV bookings & revenue reporting','all',
+      'C','C','—','—','—','—','R/A',  'C','C','—','—','—','—','R/A',  'C','C','—','—','—','—','R/A',  'C','C','—','—','—','—','R/A'],
+    ['Win/loss & conversion loss reporting','all',
+      'C','R','—','—','—','—','A',  'C','R','—','—','—','—','A',  'C','R','—','—','—','—','A',  'C','R','—','—','—','—','A'],
+    ['PS backlog & milestone completion reporting','all',
+      '—','C','R','—','—','—','A',  '—','C','R','—','—','—','A',  '—','C','R','—','—','—','A',  '—','C','R','—','—','—','A'],
+    ['Usage cap / commitment tracking','all',
+      '—','R','C','—','—','—','A',  '—','R','C','—','—','—','A',  '—','R','C','—','—','—','A',  '—','R','C','—','—','—','A'],
+    ['NAV / HYP / DWH reconciliation report (revenue)','css',
+      D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R','—','—','—','—','A',  D,D,D,D,D,D,D],
+    ['SOX compliance & audit support','all',
+      '—','C','—','—','—','—','R/A',  '—','C','—','—','—','—','R/A',  '—','C','—','—','—','—','R/A',  '—','C','—','—','—','—','R/A'],
+    ['Data quality monitoring & audit trail','all',
+      '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A'],
   ]},
 ];
 
@@ -496,7 +604,6 @@ var state=[];
 var pendingEdits=[];
 var auditLog=[];
 var hasChanges=false;
-// notes[sectionIdx] = {text, savedBy, savedLabel, savedTs}
 var notes=[];
 
 function buildState(){
@@ -516,7 +623,6 @@ function markChanged(){
   document.getElementById('btnSave').disabled=false;
 }
 
-// ── TABS ──────────────────────────────────────────────────────────────────────
 function switchTab(t){
   ['raci','notes','log'].forEach(function(id){
     document.getElementById('tab-'+id).classList.toggle('active',id===t);
@@ -527,7 +633,6 @@ function switchTab(t){
   if(t==='log') renderLog();
 }
 
-// ── TABLE ─────────────────────────────────────────────────────────────────────
 function getStepLabel(ri){
   var idx=0,lbl='';
   SECTIONS.forEach(function(sec){sec.rows.forEach(function(r){if(idx===ri)lbl=r[0];idx++;});});
@@ -561,19 +666,14 @@ function refreshCell(ri,ci){
   if(el) el.innerHTML=cellHtml(ri,ci);
 }
 
-// ── FILTER ────────────────────────────────────────────────────────────────────
 function filterTable(){
   var sv=document.getElementById('sysFilter').value;
   var stv=document.getElementById('stakeFilter').value;
   document.querySelectorAll('#raciTable tr').forEach(function(tr){
     var cells=tr.children;
     for(var i=1;i<cells.length;i++){
-      var sysBlock=Math.floor((i-1)/7);
-      var stakeBlock=(i-1)%7;
-      var sysKey=SYS_KEYS[sysBlock];
-      var showSys=(sv==='all'||sysKey===sv);
-      var showStake=(stv==='all'||stakeBlock===parseInt(stv));
-      cells[i].style.display=(showSys&&showStake)?'':'none';
+      var sb=Math.floor((i-1)/7),sk=(i-1)%7,key=SYS_KEYS[sb];
+      cells[i].style.display=(sv==='all'||key===sv)&&(stv==='all'||sk===parseInt(stv))?'':'none';
     }
   });
   document.querySelectorAll('#tableBody tr:not([data-sec])').forEach(function(r){
@@ -631,7 +731,7 @@ document.addEventListener('click',function(e){
   if(!document.getElementById('cellPopup').contains(e.target)&&!e.target.closest('[data-cell]')) closePopup();
 });
 
-// ── RACI SAVE MODAL ───────────────────────────────────────────────────────────
+// ── RACI SAVE ────────────────────────────────────────────────────────────────
 function openSaveModal(){
   document.getElementById('loginErr').style.display='none';
   document.getElementById('successBanner').style.display='none';
@@ -676,15 +776,13 @@ document.getElementById('pwd').addEventListener('keydown',function(e){if(e.key==
 document.getElementById('uname').addEventListener('keydown',function(e){if(e.key==='Enter')doSaveLogin();});
 
 // ── BP NOTES ──────────────────────────────────────────────────────────────────
-var pendingNoteIdx=-1; // section index waiting for login
+var pendingNoteIdx=-1;
 
 function buildNotesGrid(){
-  var grid=document.getElementById('notesGrid');
-  grid.innerHTML='';
+  var grid=document.getElementById('notesGrid');grid.innerHTML='';
   SECTIONS.forEach(function(sec,idx){
     var n=notes[idx]||{};
-    var card=document.createElement('div');
-    card.className='note-card';
+    var card=document.createElement('div');card.className='note-card';
     var savedMeta=n.savedTs?'Last saved: '+n.savedTs+' by '+n.savedLabel:'No note saved yet';
     card.innerHTML=
       '<div class="note-card-head">'+
@@ -708,7 +806,6 @@ function buildNotesGrid(){
 function noteDirty(idx){
   document.getElementById('note-dot-'+idx).style.display='block';
   document.getElementById('note-btn-'+idx).disabled=false;
-  // show unsaved indicator on tab
   document.getElementById('notesDot').style.display='block';
 }
 
@@ -732,15 +829,12 @@ function doNoteSaveLogin(){
     var text=document.getElementById('note-ta-'+idx).value.trim();
     var ts=nowTs();
     notes[idx]={text:text,savedBy:u,savedLabel:USERS[u].label,savedTs:ts};
-    // update card UI
     document.getElementById('note-meta-'+idx).textContent='Last saved: '+ts+' by '+USERS[u].label;
     document.getElementById('note-dot-'+idx).style.display='none';
     document.getElementById('note-btn-'+idx).disabled=true;
-    // log it
     var entry={type:'note',ts:ts,user:u,userLabel:USERS[u].label,stepLabel:SECTIONS[idx].title,col:'BP Notes',oldVal:'',oldOff:false,newVal:text,newOff:false};
     auditLog.unshift(entry);updateLogCount();
     syncToSheets([entry]);
-    // check if any note card still dirty
     var anyDirty=false;
     SECTIONS.forEach(function(_,i){if(document.getElementById('note-dot-'+i)&&document.getElementById('note-dot-'+i).style.display==='block') anyDirty=true;});
     document.getElementById('notesDot').style.display=anyDirty?'block':'none';
@@ -761,22 +855,15 @@ function renderAllNotes(){
   var entries=[];
   SECTIONS.forEach(function(sec,idx){
     var n=notes[idx];
-    if(n&&n.text&&(!q||(n.text+sec.title+n.savedLabel).toLowerCase().includes(q))){
-      entries.push({title:sec.title,n:n});
-    }
+    if(n&&n.text&&(!q||(n.text+sec.title+n.savedLabel).toLowerCase().includes(q))) entries.push({title:sec.title,n:n});
   });
   if(!entries.length){
-    el.innerHTML='<div class="no-notes">'+(Object.keys(notes).length?'No notes match your search.':'No notes saved yet. Write in a section card above and save it.')+'</div>';
-    return;
+    el.innerHTML='<div class="no-notes">'+(Object.keys(notes).length?'No notes match your search.':'No notes saved yet. Write in a section card above and save it.')+'</div>';return;
   }
   el.innerHTML=entries.map(function(e){
     return '<div class="note-entry">'+
-      '<div class="note-entry-head">'+
-        '<span class="note-entry-section">'+e.title+'</span>'+
-        '<span class="note-entry-meta">'+e.n.savedTs+' &nbsp;·&nbsp; '+e.n.savedLabel+'</span>'+
-      '</div>'+
-      '<div class="note-entry-text">'+escHtml(e.n.text)+'</div>'+
-    '</div>';
+      '<div class="note-entry-head"><span class="note-entry-section">'+e.title+'</span><span class="note-entry-meta">'+e.n.savedTs+' · '+e.n.savedLabel+'</span></div>'+
+      '<div class="note-entry-text">'+escHtml(e.n.text)+'</div></div>';
   }).join('');
 }
 
@@ -802,9 +889,7 @@ function renderLog(){
     el.innerHTML='<div class="log-empty">'+(auditLog.length?'No entries match your search.':'No changes or notes saved yet.')+'</div>';return;
   }
   var rows=filtered.map(function(e){
-    var typePill=e.type==='note'
-      ?'<span class="log-type-note">BP Note</span>'
-      :'<span class="log-type-raci">RACI</span>';
+    var typePill=e.type==='note'?'<span class="log-type-note">BP Note</span>':'<span class="log-type-raci">RACI</span>';
     var changeCell=e.type==='note'
       ?'<span style="font-size:11px;color:#172b4d;white-space:pre-wrap">'+escHtml((e.newVal||'').slice(0,120)+(e.newVal&&e.newVal.length>120?'…':''))+'</span>'
       :'<span class="val-old">'+(e.oldVal||'—')+(e.oldOff?' <span class="inactive-tag">inactive</span>':'')+'</span><span class="arrow">→</span><span class="val-new">'+(e.newVal||'—')+(e.newOff?' <span class="inactive-tag">inactive</span>':'')+'</span>';
@@ -831,7 +916,6 @@ function clearLog(){
   auditLog=[];updateLogCount();renderLog();
 }
 
-// ── GOOGLE SHEETS SYNC ────────────────────────────────────────────────────────
 function syncToSheets(entries){
   if(!APPS_SCRIPT_URL||APPS_SCRIPT_URL==='YOUR_APPS_SCRIPT_URL_HERE') return;
   fetch(APPS_SCRIPT_URL,{method:'POST',body:JSON.stringify({entries:entries})}).catch(function(){});
@@ -849,15 +933,9 @@ function loadAuditLogFromSheets(){
   }).catch(function(){});
 }
 
-// ── HELPERS ───────────────────────────────────────────────────────────────────
-function nowTs(){
-  return new Date().toLocaleString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'});
-}
-function escHtml(s){
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
+function nowTs(){return new Date().toLocaleString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'});}
+function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
-// ── INIT ──────────────────────────────────────────────────────────────────────
 buildState();buildTable();filterTable();loadAuditLogFromSheets();
 </script>
 </body>
