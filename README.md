@@ -362,7 +362,7 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 
 <script>
 // ── CONFIG ────────────────────────────────────────────────────────────────────
-var APPS_SCRIPT_URL='YOUR_APPS_SCRIPT_URL_HERE';
+var APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbzrIEohEjMFiKL0LzKn9hLNnFVSlD5QXWAB9i4UiLn4XscIhZJd_jBxhWGnIA4EocHr/exec';
 
 // ── USERS ─────────────────────────────────────────────────────────────────────
 var USERS={
