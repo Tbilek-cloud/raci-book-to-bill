@@ -1,4 +1,4 @@
-[book_to_bill_raci (4).html](https://github.com/user-attachments/files/26114923/book_to_bill_raci.4.html)
+[book_to_bill_raci (5).html](https://github.com/user-attachments/files/26115092/book_to_bill_raci.5.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,7 @@ body{font-family:Arial,sans-serif;font-size:13px;background:#f4f5f7;color:#172b4
 .toolbar select:focus{border-color:#0052cc}
 .edit-hint{font-size:11px;color:#6b778c;font-style:italic}
 .panel{display:none;flex:1;overflow-y:auto}.panel.active{display:block}
-.content{padding:16px 20px}
+.content{padding:16px 8px}
 .page-title{font-size:15px;font-weight:700;margin-bottom:2px}
 .page-sub{font-size:11px;color:#6b778c;margin-bottom:12px}
 .legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
@@ -191,7 +191,7 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
       <div class="leg"><span class="badge i" style="cursor:default">I</span>Informed</div>
       <div class="leg"><span class="badge ra" style="cursor:default">R/A</span>Resp. &amp; Accountable</div>
     </div>
-    <div style="overflow-x:auto">
+    <div style="overflow-x:auto;margin:0 -8px">
     <table id="raciTable">
     <colgroup>
       <col style="width:18%">
