@@ -1,4 +1,4 @@
-[book_to_bill_raci (5).html](https://github.com/user-attachments/files/26115092/book_to_bill_raci.5.html)
+[book_to_bill_raci (6).html](https://github.com/user-attachments/files/26115212/book_to_bill_raci.6.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,13 +20,13 @@ body{font-family:Arial,sans-serif;font-size:13px;background:#f4f5f7;color:#172b4
 .tab{padding:10px 18px;font-size:12px;font-weight:600;color:#6b778c;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:color .12s,border-color .12s}
 .tab:hover{color:#0052cc}.tab.active{color:#0052cc;border-bottom-color:#0052cc}
 .tab.notes-tab.active{color:#6554c0;border-bottom-color:#6554c0}
-.toolbar{background:#fff;border-bottom:1px solid #dfe1e6;padding:9px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;flex-shrink:0}
+.toolbar{background:#fff;border-bottom:1px solid #dfe1e6;padding:9px 4px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;flex-shrink:0}
 .toolbar label{font-size:11px;color:#6b778c;font-weight:600}
 .toolbar select{font-size:12px;padding:5px 8px;border:1.5px solid #dfe1e6;border-radius:4px;background:#fff;color:#172b4d;outline:none}
 .toolbar select:focus{border-color:#0052cc}
 .edit-hint{font-size:11px;color:#6b778c;font-style:italic}
 .panel{display:none;flex:1;overflow-y:auto}.panel.active{display:block}
-.content{padding:16px 8px}
+.content{padding:16px 4px}
 .page-title{font-size:15px;font-weight:700;margin-bottom:2px}
 .page-sub{font-size:11px;color:#6b778c;margin-bottom:12px}
 .legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
@@ -191,7 +191,7 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
       <div class="leg"><span class="badge i" style="cursor:default">I</span>Informed</div>
       <div class="leg"><span class="badge ra" style="cursor:default">R/A</span>Resp. &amp; Accountable</div>
     </div>
-    <div style="overflow-x:auto;margin:0 -8px">
+    <div style="overflow-x:auto;margin:0 -4px">
     <table id="raciTable">
     <colgroup>
       <col style="width:18%">
