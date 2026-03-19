@@ -1,4 +1,3 @@
-[book_to_bill_raci (3).html](https://github.com/user-attachments/files/26098580/book_to_bill_raci.3.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +47,6 @@ td.step{text-align:left;font-size:11px;color:#172b4d;padding-left:16px;line-heig
 .reg-header{font-size:9px;color:#0052cc !important;font-weight:400}
 tr:hover td:not(.section-row td){background:#f0f4ff}
 .section-row:hover td{background:#e4e6eb}
-/* BP NOTES */
 .notes-panel{padding:20px;max-width:1100px}
 .notes-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:10px}
 .notes-title{font-size:15px;font-weight:700;color:#172b4d}
@@ -79,7 +77,6 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 .note-entry-meta{font-size:10px;color:#6b778c}
 .note-entry-text{font-size:12px;color:#172b4d;line-height:1.6;white-space:pre-wrap}
 .no-notes{text-align:center;color:#6b778c;padding:30px 0;font-size:13px}
-/* AUDIT LOG */
 .log-panel{padding:20px}
 .log-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px}
 .log-title{font-size:15px;font-weight:700}
@@ -101,7 +98,6 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 .stat-n{font-size:20px;font-weight:700;color:#0052cc}.stat-l{font-size:10px;color:#6b778c;text-transform:uppercase;letter-spacing:.4px}
 .log-type-note{background:#f0ebff;color:#5243aa;font-size:10px;padding:1px 7px;border-radius:8px;font-weight:700;margin-left:4px}
 .log-type-raci{background:#deebff;color:#0052cc;font-size:10px;padding:1px 7px;border-radius:8px;font-weight:700;margin-left:4px}
-/* POPUP */
 .popup{display:none;position:fixed;z-index:200;background:#fff;border-radius:8px;box-shadow:0 4px 24px rgba(0,0,0,.22);width:240px;overflow:hidden}
 .popup.open{display:block}
 .popup-head{background:#0052cc;color:#fff;padding:9px 12px;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center}
@@ -116,7 +112,6 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 .popup-footer{display:flex;gap:5px;padding:8px 12px;border-top:1px solid #f0f0f0;background:#f4f5f7}
 .btn-apply{background:#0052cc;color:#fff;border:none;border-radius:4px;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer;flex:1}.btn-apply:hover{background:#0065ff}
 .btn-cancel2{background:#fff;color:#172b4d;border:1px solid #dfe1e6;border-radius:4px;padding:5px 9px;font-size:11px;cursor:pointer}.btn-cancel2:hover{background:#ebecf0}
-/* MODALS */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:300;align-items:center;justify-content:center}
 .modal-bg.open{display:flex}
 .modal{background:#fff;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,.2);width:380px;overflow:hidden}
@@ -231,7 +226,6 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
   </div>
 </div>
 
-<!-- BP NOTES PANEL -->
 <div class="panel" id="panel-notes">
   <div class="notes-panel">
     <div class="notes-header"><div class="notes-title">&#128221; Business Partner Notes</div></div>
@@ -244,7 +238,6 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
   </div>
 </div>
 
-<!-- AUDIT LOG PANEL -->
 <div class="panel" id="panel-log">
   <div class="log-panel">
     <div class="log-header">
@@ -260,7 +253,6 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
   </div>
 </div>
 
-<!-- CELL POPUP -->
 <div class="popup" id="cellPopup">
   <div class="popup-head">Edit cell <button onclick="closePopup()">×</button></div>
   <div class="popup-body">
@@ -273,7 +265,6 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
   </div>
 </div>
 
-<!-- RACI SAVE MODAL -->
 <div class="modal-bg" id="saveModal">
   <div class="modal">
     <div class="modal-head">Confirm &amp; save RACI changes <button onclick="closeSaveModal()">×</button></div>
@@ -294,7 +285,6 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
   </div>
 </div>
 
-<!-- NOTE SAVE MODAL -->
 <div class="modal-bg" id="noteModal">
   <div class="modal">
     <div class="modal-head purple">Save BP Note <button onclick="closeNoteModal()">×</button></div>
@@ -315,10 +305,8 @@ tr:hover td:not(.section-row td){background:#f0f4ff}
 </div>
 
 <script>
-// ── CONFIG ────────────────────────────────────────────────────────────────────
 var APPS_SCRIPT_URL='YOUR_APPS_SCRIPT_URL_HERE';
 
-// ── USERS ─────────────────────────────────────────────────────────────────────
 var USERS={
   'cbm.uki':   {pass:'pass123',label:'CBM – UKI',   role:'cbm'},
   'cbm.canada':{pass:'pass123',label:'CBM – Canada',role:'cbm'},
@@ -343,18 +331,12 @@ var SYS_LABELS={kf:'Keyforce–NetSuite (UKI)',rq:'Rapid–QuickBooks (Canada)',
 var STAKE_LABELS=['Sales','Billing/CBM','PS','Collections','Cash & Bank','CE/Warehouse','FBP'];
 function colLabel(ci){return SYS_LABELS[SYS_KEYS[Math.floor(ci/7)]]+' / '+STAKE_LABELS[ci%7];}
 
-// ── DATA (Anna's corrections applied) ─────────────────────────────────────────
-// Cols per system: [Sales, Billing/CBM, PS, Collections, Cash&Bank, CE/WH, FBP]
 var D='—';
 var SECTIONS=[
 
-  // ── 1. CATALOGUE & PRODUCT MANAGEMENT ────────────────────────────────────
-  // Anna: Catalogue team (not billing) maintains catalogue in NS & NAV.
-  // Billing only does Annual Price Increase (moved to section 10).
   {title:'1. Catalogue & Product Management',rows:[
     ['New product / SKU setup & activation in source system','all',
       'C','—','—','—','—','—','A',  'C','—','—','—','—','—','A',  'C','—','—','—','—','—','A',  'C','—','—','—','—','—','A'],
-    // ^ Catalogue team (CE/WH col used as proxy) owns this, not Billing
     ['Catalogue maintenance: item attributes, rev rec & billing fields','all',
       '—','I','—','—','—','R/A','A',  '—','I','—','—','—','R/A','A',  '—','I','—','—','—','R/A','A',  '—','I','—','—','—','R/A','A'],
     ['Pricing maintenance & rate card update','all',
@@ -363,7 +345,6 @@ var SECTIONS=[
       '—','I','—','—','—','R','—',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
   ]},
 
-  // ── 2. CUSTOMER MASTER DATA MANAGEMENT ───────────────────────────────────
   {title:'2. Customer Master Data Management',rows:[
     ['New customer creation (credit check, VAT, mandatory fields)','all',
       'C','R','—','—','—','C','A',  'C','R','—','—','—','C','A',  'C','R','—','—','—','C','A',  'C','R','—','—','—','C','A'],
@@ -375,23 +356,15 @@ var SECTIONS=[
       'C','R','—','—','—','—','A',  'C','R','—','—','—','—','A',  'C','R','—','—','—','—','A',  'C','R','—','—','—','—','A'],
   ]},
 
-  // ── 3. QUOTE TO ORDER ─────────────────────────────────────────────────────
-  // Anna: Billing team does NOT approve discounts. Only validates quote/order (system vs signed PDF).
-  // In CSS/NAV: Oracle CPQ quote "Accepted by customer" → Billing validates values vs PDF, can only update PO number.
-  // In KF/NS: Billing validates sales orders only, does NOT approve quotes or discounts.
-  // PS project container: created automatically in NS by order activation; in NAV by "Accepted by CDK" status.
   {title:'3. Quote to Order',rows:[
     ['Quote validation: discount & commercial approval','all',
       'R','—','—','—','—','—','A',  'R','—','—','—','—','—','A',  'R','—','—','—','—','—','A',  'R','—','—','—','—','—','A'],
-    // ^ Billing removed from discount approval per Anna
     ['Quote/order validation: system values vs signed PDF (Billing team)','all',
       '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I'],
-    // ^ Billing validates system vs PDF only; PO number update only in CSS/NAV
     ['Purchase Order number update on order (CSS/NAV)','css',
       D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R','—','—','—','—','I',  D,D,D,D,D,D,D],
     ['PS involvement matrix check at quoting stage','all',
       'C','—','R/A','—','—','—','C',  'C','—','R/A','—','—','—','C',  'C','—','R/A','—','—','—','C',  'C','—','R/A','—','—','—','C'],
-    // PS project container auto-created on order activation (NS) / "Accepted by CDK" status (NAV)
     ['Order activation → auto PS project & subscription creation (NS)','kf',
       '—','—','—','—','—','—','I',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
     ['"Accepted by CDK" status → auto Sales Contract (Project) creation (NAV)','css',
@@ -400,24 +373,17 @@ var SECTIONS=[
       D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','I',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
   ]},
 
-  // ── 4. PS – PROJECT & MILESTONE MANAGEMENT ────────────────────────────────
-  // Anna: PS project container auto-created (see section 3).
-  // T&M rating done by Warehouse/CE team, not CBM. CBM only does corrections.
-  // Billing milestone: PS triggers OT (automatic); CBM runs recurring billing runs.
   {title:'4. PS – Project & Milestone Management',rows:[
     ['Fixed-fee vs T&M contract type identification at quote','all',
       'C','C','R','—','—','—','A',  'C','C','R','—','—','—','A',  'C','C','R','—','—','—','A',  'C','C','R','—','—','—','A'],
     ['Sub-milestone creation & hour tracking','all',
       '—','—','R/A','—','—','—','I',  '—','—','R/A','—','—','—','I',  '—','—','R/A','—','—','—','I',  '—','—','R/A','—','—','—','I'],
-    // T&M rating: CE/Warehouse team finalises; CBM only corrects if needed
     ['T&M billing finalisation (CE/Warehouse team)','all',
       '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I'],
     ['T&M billing corrections (CBM, if required)','all',
       '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I',  '—','R','—','—','—','—','I'],
-    // OT milestone invoice: triggered automatically by PS milestone completion
     ['OT/Consultancy invoice: auto-triggered on milestone completion (PS)','all',
       '—','—','R','—','—','—','I',  '—','—','R','—','—','—','I',  '—','—','R','—','—','—','I',  '—','—','R','—','—','—','I'],
-    // Recurring element billed by CBM in billing runs
     ['Recurring element billing runs (CBM)','all',
       '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I'],
     ['PS fixed-fee: control total hours ≤ contracted maximum','all',
@@ -426,14 +392,9 @@ var SECTIONS=[
       '—','—','R','—','—','—','I',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
   ]},
 
-  // ── 5. ORDER TO FULFILMENT & BACKLOG ─────────────────────────────────────
-  // Anna: No Backlog Recurring Review in NS; exists only in NAV; FBPs not involved.
-  // "Deletion" not available in NS/NAV for billing. Backlog management is done by PS.
   {title:'5. Order to Fulfilment & Backlog',rows:[
-    // Backlog recurring review: NAV only, PS/CBM, FBP not involved
     ['Backlog recurring review (NAV only — not applicable in NS)','css',
       D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R','C','—','—','—','—',  D,D,D,D,D,D,D],
-    // Backlog management (amendments/admin deletions by PS)
     ['Backlog order amendments & admin deletions (managed by PS)','all',
       'C','—','R/A','—','—','—','I',  'C','—','R/A','—','—','—','I',  'C','—','R/A','—','—','—','I',  'C','—','R/A','—','—','—','I'],
     ['Hardware fulfilment (serialised & non-serialised) — Warehouse','all',
@@ -444,15 +405,9 @@ var SECTIONS=[
       D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','I',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
   ]},
 
-  // ── 6. INVOICE & BILLING GENERATION ──────────────────────────────────────
-  // Anna: No SaaS/HaaS split in NS — Recurring and Transactional (Usage) billing by CBM.
-  // Sales Order (HW) billing by Warehouse. OT/Consultancy auto on milestone.
-  // PS items invoiced automatically in both NS & NAV on milestone completion.
-  // FBPs NOT informed every time invoice dispatched.
-  // Pro forma: does NOT exist in NS; manual actual Proforma done for PO request purposes only.
-  // OT & Hardware by Warehouse or auto on milestone.
+  // ── SECTION 6: removed "E-invoicing & tax compliance" row per meeting (company-wide, not billing team)
+  // ── "Invoice delivery" row: removed "paper" from label per meeting correction
   {title:'6. Invoice & Billing Generation',rows:[
-    // Recurring billing: CBM triggers billing runs in NS & NAV
     ['Recurring billing runs — CBM triggers (NS & NAV)','kf',
       '—','R/A','—','—','—','—','—',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
     ['Recurring billing runs — CBM triggers (NAV)','css',
@@ -461,49 +416,42 @@ var SECTIONS=[
       D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','—',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
     ['Recurring invoices in Serti (Canada)','se',
       D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','—'],
-    // Transactional/Usage billing: CBM triggers in NS
     ['Transactional / usage billing (CBM triggers in NS)','kf',
       '—','R/A','—','—','—','—','—',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
-    // Sales Order / Hardware billing: Warehouse team
     ['Sales order / hardware invoice (Warehouse team)','all',
       '—','—','—','—','—','R','I',  '—','—','—','—','—','R','I',  '—','—','—','—','—','R','I',  '—','—','—','—','—','R','I'],
-    // OT/Consultancy/PS: auto on milestone completion in both NS & NAV
     ['OT / PS invoice: auto-generated on milestone completion','all',
       '—','—','R','—','—','—','—',  '—','—','R','—','—','—','—',  '—','—','R','—','—','—','—',  '—','—','R','—','—','—','—'],
     ['Invoice consolidation (multi-subscription, bill-to grouping)','all',
       '—','R/A','—','—','—','—','—',  '—','R/A','—','—','—','—','—',  '—','R/A','—','—','—','—','—',  '—','R/A','—','—','—','—','—'],
-    // Pro forma: does NOT exist in NS; manual only for PO request
     ['Pro forma invoice (manual, PO request only — NOT in NS)','css',
       D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R/A','—','—','—','—','—',  D,D,D,D,D,D,D],
-    // Invoice delivery: FBP not informed routinely
-    ['Invoice delivery (email / portal / paper)','all',
+    // "paper" removed from delivery method label per meeting
+    ['Invoice delivery (email / portal)','all',
       '—','R/A','—','—','—','C','—',  '—','R/A','—','—','—','C','—',  '—','R/A','—','—','—','C','—',  '—','R/A','—','—','—','C','—'],
-    ['E-invoicing & tax compliance (VAT, e-reporting)','all',
-      '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A'],
     ['Usage/consumption billing (SMS, print)','all',
       '—','R','C','—','—','—','A',  '—','R','C','—','—','—','A',  '—','R','C','—','—','—','A',  '—','R','C','—','—','—','A'],
   ]},
 
-  // ── 7. CREDIT MEMOS & BILLING CORRECTIONS ────────────────────────────────
+  // ── SECTION 7: "rebuild" → "rebill" typo fixed; RMA row added
   {title:'7. Credit Memos & Billing Corrections',rows:[
     ['Credit memo request & initiation (reason code, supporting doc)','all',
       '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A'],
     ['Credit memo approval (tiered by value & reason)','all',
       '—','—','—','—','—','—','A',  '—','—','—','—','—','—','A',  '—','—','—','—','—','—','A',  '—','—','—','—','—','—','A'],
-    ['Invoice correction & rebilling (credit rebuild → recharge)','all',
+    // Fixed typo: "rebuild" → "rebill"
+    ['Invoice correction & rebilling (credit rebill → recharge)','all',
       '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A'],
     ['Duplicate invoice prevention & detection','all',
       '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I',  '—','R/A','—','—','—','—','I'],
+    // New row added from meeting: RMA process in NetSuite ends with credit memo
+    ['Return Material Authorization (RMA) — credit memo in NetSuite','kf',
+      '—','R','—','—','—','C','A',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
   ]},
 
-  // ── 8. REVENUE RECOGNITION ────────────────────────────────────────────────
-  // Anna: Revenue release & reconciliation in NAV done by Billing (CBM).
-  // Reconciliation is a separate report reconciling NAV, HYP & DWH.
-  // Contract cost capitalisation & amortisation: not really applicable.
   {title:'8. Revenue Recognition',rows:[
     ['Revenue plan creation & release – IFRS + local GAAP (NS ZAB)','kf',
       '—','I','—','—','—','—','R/A',  D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  D,D,D,D,D,D,D],
-    // NAV: Billing (CBM) does revenue release; reconciliation vs HYP & DWH is separate
     ['Revenue release in NAV (CBM) + reconciliation vs HYP & DWH','css',
       D,D,D,D,D,D,D,  D,D,D,D,D,D,D,  '—','R','—','—','—','—','A',  D,D,D,D,D,D,D],
     ['PS rev rec: ratable (linked to SaaS) vs point-in-time','all',
@@ -514,7 +462,6 @@ var SECTIONS=[
       '—','I','—','—','—','—','R/A',  '—','I','—','—','—','—','R/A',  '—','I','—','—','—','—','R/A',  '—','I','—','—','—','—','R/A'],
   ]},
 
-  // ── 9. ACCOUNTS RECEIVABLE & CASH APPLICATION ─────────────────────────────
   {title:'9. Accounts Receivable & Cash Application',rows:[
     ['Payment receipt & application (direct debit / bank transfer)','all',
       '—','C','—','C','R','—','A',  '—','C','—','C','R','—','A',  '—','C','—','C','R','—','A',  '—','C','—','C','R','—','A'],
@@ -536,26 +483,15 @@ var SECTIONS=[
       '—','C','—','—','C','—','R/A',  '—','C','—','—','C','—','R/A',  '—','C','—','—','C','—','R/A',  '—','C','—','—','C','—','R/A'],
   ]},
 
-  // ── 10. SERVICE CONTRACT / SUBSCRIPTION / ASSET MANAGEMENT ───────────────
-  // Anna: All points adjusted to Service Contract / Subscription / Asset.
-  // Cancellations in NS: approved by FBP, processed (R) by CBM.
-  // Subscription amendments: CBM performs cancellations, qty reductions, site changes.
-  // Co-term: not amendable.
-  // Annual Price Increase: CBM performs adjustment in NAV & SF/NS + provides contact details.
-  // Comms: Marketing. Calculations/% uplift agreed by Finance/Sales/Legal — CBM not involved.
   {title:'10. Service Contract / Subscription / Asset Management',rows:[
     ['Service contract / subscription creation & maintenance','all',
       'C','R/A','—','—','—','C','I',  'C','R/A','—','—','—','C','I',  'C','R/A','—','—','—','C','I',  'C','R/A','—','—','—','C','I'],
-    // Cancellations: FBP approves (NS), CBM processes (R in both)
     ['Subscription / asset cancellation — FBP approves, CBM processes','all',
       '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A',  '—','R','—','—','—','—','A'],
-    // Qty reductions & site changes: CBM performs
     ['Quantity reductions (downsell) & site changes — CBM','all',
       'I','R','—','—','—','—','I',  'I','R','—','—','—','—','I',  'I','R','—','—','—','—','I',  'I','R','—','—','—','—','I'],
-    // Evergreen & term renewals
     ['Evergreen & term-based renewal processing','all',
       'R','C','—','—','—','—','I',  'R','C','—','—','—','—','I',  'R','C','—','—','—','—','I',  'R','C','—','—','—','—','I'],
-    // Annual Price Increase: CBM adjusts ERP & provides contacts; Marketing comms; Finance/Sales/Legal agree %
     ['Annual Price Increase: uplift % agreed by Finance / Sales / Legal','all',
       'C','—','—','—','—','—','R/A',  'C','—','—','—','—','—','R/A',  'C','—','—','—','—','—','R/A',  'C','—','—','—','—','—','R/A'],
     ['Annual Price Increase: ERP price adjustment (CBM) & contact data','all',
@@ -564,7 +500,6 @@ var SECTIONS=[
       '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I',  '—','C','—','—','—','R','I'],
   ]},
 
-  // ── 11. CUSTOMER ENABLEMENT (CE) ─────────────────────────────────────────
   {title:'11. Customer Enablement (CE)',rows:[
     ['Case creation & routing (billing/contract disputes)','all',
       'C','C','—','C','—','R/A','I',  'C','C','—','C','—','R/A','I',  'C','C','—','C','—','R/A','I',  'C','C','—','C','—','R/A','I'],
@@ -578,7 +513,6 @@ var SECTIONS=[
       'C','C','R','—','—','R','A',  'C','C','R','—','—','R','A',  'C','C','R','—','—','R','A',  'C','C','R','—','—','R','A'],
   ]},
 
-  // ── 12. REPORTING & GOVERNANCE ────────────────────────────────────────────
   {title:'12. Reporting & Governance',rows:[
     ['AR ageing, DSO & collections reporting','all',
       '—','R','—','C','C','—','A',  '—','R','—','C','C','—','A',  '—','R','—','C','C','—','A',  '—','R','—','C','C','—','A'],
@@ -599,12 +533,7 @@ var SECTIONS=[
   ]},
 ];
 
-// ── STATE ─────────────────────────────────────────────────────────────────────
-var state=[];
-var pendingEdits=[];
-var auditLog=[];
-var hasChanges=false;
-var notes=[];
+var state=[],pendingEdits=[],auditLog=[],hasChanges=false,notes=[];
 
 function buildState(){
   state=[];var ri=0;
@@ -686,7 +615,6 @@ function filterTable(){
   });
 }
 
-// ── CELL POPUP ────────────────────────────────────────────────────────────────
 var editRi=-1,editCi=-1,editSelVal='',editOff=false,popupOpen=false;
 
 function openCell(ri,ci,anchor){
@@ -731,7 +659,6 @@ document.addEventListener('click',function(e){
   if(!document.getElementById('cellPopup').contains(e.target)&&!e.target.closest('[data-cell]')) closePopup();
 });
 
-// ── RACI SAVE ────────────────────────────────────────────────────────────────
 function openSaveModal(){
   document.getElementById('loginErr').style.display='none';
   document.getElementById('successBanner').style.display='none';
@@ -775,7 +702,6 @@ function discardChanges(){
 document.getElementById('pwd').addEventListener('keydown',function(e){if(e.key==='Enter')doSaveLogin();});
 document.getElementById('uname').addEventListener('keydown',function(e){if(e.key==='Enter')doSaveLogin();});
 
-// ── BP NOTES ──────────────────────────────────────────────────────────────────
 var pendingNoteIdx=-1;
 
 function buildNotesGrid(){
@@ -867,7 +793,6 @@ function renderAllNotes(){
   }).join('');
 }
 
-// ── AUDIT LOG ─────────────────────────────────────────────────────────────────
 function updateLogCount(){
   var cnt=document.getElementById('logCount');
   cnt.textContent=auditLog.length;cnt.style.display=auditLog.length?'inline-block':'none';
